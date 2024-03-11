@@ -13,10 +13,19 @@
         <h3>Email Checker</h3>
         <textarea maxlength="50000" autofocus id="forcheckEmails" placeholder="Enter emails separated by space or new line."></textarea>
         <button onclick="resizeMe()">Check</button>
-        <textarea id="checkedEmails" placeholder="Valid Emails" readonly></textarea>
-        <p>Total Valid Emails: <span id="validEmails"></span></p>
-        <script src="./script.js"></script>
+
     </div>
+    <div class="emailsforCheck">
+        <div>
+            <p>Valid Emails: <span id="validEmails">0</span></p>
+            <textarea id="checkedEmails" placeholder="Valid Emails" readonly></textarea>
+        </div>
+        <div>
+            <p>Invalid Emails: <span id="invalidEmails">0</span></p>
+            <textarea id="checkedEmails2" placeholder="Invalid Emails" readonly></textarea>
+        </div>
+    </div>
+    <script src="./script.js"></script>
 </body>
 
 </html>

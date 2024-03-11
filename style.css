@@ -7,7 +7,7 @@ body {
     display: inline-grid;
 }
 
-.form textarea {
+textarea {
     height: 140px;
     width: 300px;
 }
@@ -25,6 +25,12 @@ button {
     background: #000a47;
     line-height: 1.15;
     font-size: 16px;
+}
+
+.emailsforCheck {
+    display: flex;
+    gap: 2rem;
+    place-content: center;
 }
 
 button:hover {

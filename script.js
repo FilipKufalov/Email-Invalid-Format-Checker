@@ -1,23 +1,39 @@
 function resizeMe() {
-    var emails = document.getElementById("forcheckEmails");
-    var linesArray = emails.value.split("\n");
-    var checked = document.getElementById("checkedEmails");
-    var validEmailsNumber = 0;
-    var validEmails = document.getElementById("validEmails");
-    checked.innerHTML = "";
+
+    // Email Input
+    const emailsInput = document.getElementById("forcheckEmails");
+
+    // Split Lines
+    const linesArray = emailsInput.value.split("\n");
+
+    // checked = valid, checked2 = invalid
+    const checked = document.getElementById("checkedEmails");
+    const checked2 = document.getElementById("checkedEmails2");
     
+    const validEmails = document.getElementById("validEmails");
+    const invalidEmails = document.getElementById("invalidEmails");
+    let validEmailsNumber = 0;
+    let invalidEmailsNumber = 0;
+
+    checked.textContent = "";
+    checked2.textContent = "";
+
     linesArray.forEach(element => {
-        var email = element.trim();
+        const email = element.trim();
         if (isValidEmail(email)) {
-            checked.innerHTML += email + "\n";
+            checked.textContent += email + "\n";
             validEmailsNumber++;
+        } else {
+            checked2.textContent += email + "\n";
+            invalidEmailsNumber++;
         }
     });
 
-    validEmails.innerHTML = validEmailsNumber;
+    validEmails.textContent = validEmailsNumber;
+    invalidEmails.textContent = invalidEmailsNumber;
 }
 
 function isValidEmail(email) {
-    var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     return emailRegex.test(email);
 }
