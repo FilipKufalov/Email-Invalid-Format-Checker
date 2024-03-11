@@ -11,18 +11,25 @@
 <body>
     <div class="form">
         <h3>Email Checker</h3>
-        <textarea maxlength="50000" autofocus id="forcheckEmails" placeholder="Enter emails separated by space or new line."></textarea>
+        <textarea maxlength="50000" autofocus id="forcheckEmails"
+            placeholder="Enter emails separated by space or new line."></textarea>
         <button onclick="resizeMe()">Check</button>
 
     </div>
     <div class="emailsforCheck">
         <div>
             <p>Valid Emails: <span id="validEmails">0</span></p>
-            <textarea autofocus id="checkedEmails" placeholder="Valid Emails" readonly></textarea>
+            <textarea autofocus id="checkedEmails" placeholder="Valid Emails" readonly style="
+            width: 300px;
+            height: 140px;
+        "></textarea>
         </div>
         <div>
             <p>Invalid Emails: <span id="invalidEmails">0</span></p>
-            <textarea autofocus id="checkedEmails2" placeholder="Invalid Emails" readonly></textarea>
+            <textarea autofocus id="checkedEmails2" placeholder="Invalid Emails" readonly style="
+            width: 300px;
+            height: 140px;
+        "></textarea>
         </div>
     </div>
     <script src="./script.js"></script>
