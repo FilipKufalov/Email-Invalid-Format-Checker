@@ -33,11 +33,6 @@ button {
     place-content: center;
 }
 
-.emailsforCheck textarea {
-    height: 140px;
-    width: 300px;
-}
-
 button:hover {
     transition: all .1s ease;
     box-shadow: 0 0 0 0 #fff, 0 0 0 3px #1de9b6;
